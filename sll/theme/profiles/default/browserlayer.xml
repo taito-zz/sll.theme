@@ -1,0 +1,6 @@
+<layers>
+  <layer
+      name="sll.theme"
+      interface="sll.theme.browser.interfaces.ISllThemeLayer"
+      />
+</layers>
