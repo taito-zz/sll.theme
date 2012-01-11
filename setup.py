@@ -7,13 +7,11 @@ def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
 
-version = read('sll', 'theme', 'version.txt').strip()
-
 long_description = (
     read('sll', 'theme', 'docs', 'index.rst'))
 
 setup(name='sll.theme',
-      version=version,
+      version='0.1',
       description="SLL Theme",
       long_description=long_description,
       # Get more strings from
@@ -23,10 +21,10 @@ setup(name='sll.theme',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='Hexagon IT',
-      author_email='oss@hexagonit.fi',
+      author='INICIE, Inc.',
+      author_email='taito.horiuchi@inicie.net',
       url='',
-      license='BSD',
+      license='',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['sll'],
       include_package_data=True,

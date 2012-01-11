@@ -605,7 +605,8 @@ dd {
   background: #dddddd;
   border-top: none;
   border-bottom: none;
-  margin: 0 0 1em 0;
+  /*margin: 0 0 1em 0;*/
+  margin: 0;
   padding: 0;
   clear: both;
 }
@@ -2725,7 +2726,29 @@ div.overlaybg div.close {
   /* Style adjustments for viewports 800px and over go here */
   #container {
     margin: 0 auto;
-    max-width: 960px;
+    /*max-width: 980px;*/
+  }
+  #portal-header {
+/*    position: relative;
+    z-index: 2;*/
+    margin: 0 auto;
+    max-width: 980px;
+  }
+  #main {
+    /*margin: 0 auto;*/
+    /*max-width: 980px;*/
+    background: blue;
+  }
+  #portal-columns {
+/*    margin: 0 auto;
+    max-width: 980px;*/
+    background: white;
+    margin: 1em 0 0 0;
+  }
+  #visual-portal-wrapper {
+    margin: 0 auto;
+    max-width: 980px;
+    /*background: white;*/
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 800px) {
