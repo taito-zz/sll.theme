@@ -1,7 +1,7 @@
 License
 =======
 
-Copyright (c) 2012, Hexagon IT Oy
+Copyright (c) 2012, INICIE, Inc.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -14,7 +14,7 @@ modification, are permitted provided that the following conditions are met:
      notice, this list of conditions and the following disclaimer in the
      documentation and/or other materials provided with the distribution.
 
-   * Neither the name of Hexagon IT Oy nor the names of its contributors may
+   * Neither the name of INICIE, Inc. nor the names of its contributors may
      be used to endorse or promote products derived from this software
      without specific prior written permission.
 

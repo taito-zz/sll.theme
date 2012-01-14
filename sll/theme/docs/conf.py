@@ -35,7 +35,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'sll.theme'
-copyright = u'2012, Hexagon IT'
+copyright = u'2012, INICIE, Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -172,7 +172,7 @@ latex_paper_size = 'a4'
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'sll.theme.tex', u'sll.theme Documentation',
-   u'Hexagon IT', 'manual'),
+   u'INCIE, Inc.', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -208,5 +208,5 @@ man_pages = [
         'index',
         'todo',
         u'sll.theme Documentation',
-        [u'Hexagon IT'],
+        [u'INICIE, Inc.'],
         1)]
