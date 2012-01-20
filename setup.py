@@ -2,16 +2,14 @@ from setuptools import find_packages
 from setuptools import setup
 import os
 
-
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
-
 
 long_description = (
     read('sll', 'theme', 'docs', 'index.rst'))
 
 setup(name='sll.theme',
-      version='0.1',
+      version='0.2',
       description="SLL Theme",
       long_description=long_description,
       # Get more strings from
@@ -30,14 +28,10 @@ setup(name='sll.theme',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'hexagonit.portletstyle',
           'hexagonit.testing',
-          'manuel',
-          'plone.app.testing',
           'plone.app.theming',
           'plone.browserlayer',
           'setuptools',
-          'unittest2',
           'zope.i18nmessageid',
       ],
       entry_points="""

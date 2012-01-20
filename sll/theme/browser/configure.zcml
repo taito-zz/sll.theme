@@ -3,4 +3,23 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="sll.theme">
 
+  <!-- The breadcrumbs -->
+  <browser:viewlet
+    name="plone.path_bar"
+    manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+    class=".viewlets.PathBarViewlet"
+    permission="zope2.View"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
+  <!-- Footer -->
+  <browser:viewlet
+    name="plone.footer"
+    for="*"
+    manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+    class=".viewlets.FooterViewlet"
+    permission="zope.Public"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
 </configure>

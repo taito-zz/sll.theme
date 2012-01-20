@@ -504,7 +504,7 @@ h5,
 h6 {
   font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
   font-weight: bold;
-  color: Black;
+  color: #0081a3;
   line-height: 1.5em;
 }
 h1 {
@@ -602,11 +602,10 @@ dd {
 }
 #portal-globalnav {
   font: 80% Arial, FreeSans, sans-serif;
-  background: #dddddd;
+  /*background: #dddddd;*/
   border-top: none;
   border-bottom: none;
-  /*margin: 0 0 1em 0;*/
-  margin: 0;
+  margin: 0 0 0.2em 0;
   padding: 0;
   clear: both;
 }
@@ -615,20 +614,27 @@ dd {
   border-bottom: none;
   border-left: none;
   border-right: none;
-  color: Black;
+  color: #0181a4;
   display: inline-block;
-  padding: 1em;
-  background: #dddddd;
+  padding: 0.3em 1em;
+  /*background: #dddddd;*/
   min-width: auto;
   text-decoration: none;
 }
-#portal-globalnav .selected a, #portal-globalnav a:hover {
-  background: #205c90;
+#portal-globalnav .selected a {
+  background: #ca2464;
   color: White;
   text-decoration: none;
+  border-radius: 5px;
+}
+#portal-globalnav a:hover {
+  background: #37a9c3;
+  color: White;
+  text-decoration: none;
+  border-radius: 5px;
 }
 #portal-globalnav .selected a:hover {
-  background: #205c90;
+  background: #37a9c3;
   color: White;
   text-decoration: none;
 }
@@ -677,6 +683,13 @@ dd {
   -moz-border-radius-bottomleft: 0.5em;
   -moz-border-radius-bottomright: 0.5em;
 }
+#quicklinks {
+  clear: right;
+  float: right;
+  font-size: 12px;
+  margin-top: 1em;
+  color: #0081a3;
+}
 #portal-searchbox {
   float: right;
   text-align: left;
@@ -689,6 +702,18 @@ dd {
 }
 #portal-searchbox label {
   font-weight: normal;
+}
+#portal-searchbox input[type="submit"] {
+  background: #c12763;
+  border-radius: 5px;
+}
+#portal-searchbox input[type="submit"]:hover {
+  background: #df2c70;
+  border-radius: 5px;
+}
+#portal-searchbox input[type="submit"]:active {
+  background: #aa2155;
+  border-radius: 5px;
 }
 #searchGadget {
   width: 13em;
@@ -746,13 +771,25 @@ input.searchField {
 /* @end */
 /* @group Path indicator (breadcrumbs) */
 #portal-breadcrumbs {
+  color: #696969;
   font-size: 80%;
   margin-bottom: 1em;
   margin-left: 0.25em;
 }
 #portal-breadcrumbs a {
+  color: #696969;
   border-bottom: none;
   display: inline-block;
+}
+#portal-breadcrumbs a:hover{
+  color: #0084a5;
+  text-decoration: underline;
+/*  border-bottom: none;
+  display: inline-block;*/
+}
+#portal-breadcrumbs a:active{
+  color: #0084a5;
+  text-decoration: none;
 }
 /* @end */
 /* @group Site actions */
@@ -988,7 +1025,9 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 }
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
   padding: 0.25em 1em;
-  border-bottom: 0.1em dotted #dddddd;
+  /*border-bottom: 0.1em dotted #dddddd;*/
+  background: #29a2bf;
+  border-radius: 5px;
   line-height: 2em;
 }
 dl.portlet ul.navTreeLevel1 .navTreeItem {
@@ -997,6 +1036,21 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
 }
 dl.portletNavigationTree dd.portletItem {
   padding: 0;
+}
+.portletStaticText {
+  color: #0081A3;
+  margin: 2em 0;
+}
+.portletStaticText h1 {
+  border-bottom: solid 2px #0081A3;
+  font-size: 1em;
+  line-height: 1em;
+  margin: 0;
+  padding: 0.2em 0.2em;
+}
+.portletStaticText p {
+  margin: 0;
+  padding: 0.2em 0.2em;
 }
 /* @end */
 /* @group Content Area */
@@ -2255,10 +2309,16 @@ dl.toc dd ol {
 /* @group Footer */
 #portal-footer {
   font-size: 75%;
-  background: #dddddd;
-  padding: 1em;
-  margin: 1em 0;
+  background: #767676;
+  /*padding: 1em;*/
+  margin: 0 auto;
   line-height: 2em;
+  max-width: 980px;
+}
+#footer-border {
+  height: 1em;
+  background: -moz-linear-gradient(#545454, #767676) repeat scroll 0 0 transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#545454), to(#767676)); 
 }
 #portal-colophon {
   font-size: 70%;
@@ -2743,7 +2803,9 @@ div.overlaybg div.close {
 /*    margin: 0 auto;
     max-width: 980px;*/
     background: white;
+    border-radius: 10px 10px 0 0;
     margin: 1em 0 0 0;
+    padding: 2em 0 0 0;
   }
   #visual-portal-wrapper {
     margin: 0 auto;
@@ -2788,6 +2850,11 @@ div.overlaybg div.close {
     top: 0px;
     width: 22.75%;
     margin-left: -98.875%;
+  }
+  #quicklinks {
+    margin: -5px 0 10px 0;
+    float: none;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 480px) {
