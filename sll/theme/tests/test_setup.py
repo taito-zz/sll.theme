@@ -1,5 +1,5 @@
-from sll.theme.tests.base import IntegrationTestCase
 from Products.CMFCore.utils import getToolByName
+from sll.theme.tests.base import IntegrationTestCase
 
 
 class TestCase(IntegrationTestCase):
@@ -14,17 +14,6 @@ class TestCase(IntegrationTestCase):
 
     def test_is_plone_app_theming_installed(self):
         self.failUnless(self.installer.isProductInstalled('plone.app.theming'))
-
-    def test_is_hexagonit_portletstyle_installed(self):
-        self.failUnless(self.installer.isProductInstalled('hexagonit.portletstyle'))
-
-    def test_portlet_styles(self):
-        from plone.registry.interfaces import IRegistry
-        from zope.component import getUtility
-        self.assertEquals(getUtility(IRegistry).get('hexagonit.portletstyle.interfaces.IPortletStyles.portlet_styles'), [
-            'noheader|No header',
-            'nofooter|No footer',
-            'noheader nofooter|No header and no footer'])
 
     def test_uninstall(self):
         self.installer.uninstallProducts(['sll.theme'])

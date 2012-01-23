@@ -64,7 +64,7 @@ input,
 select,
 textarea {
   font-family: sans-serif;
-  color: #222;
+  color: #575757;
 }
 /* =============================================================================
    Links
@@ -488,7 +488,7 @@ div.position-2\3a 3 {
 /* .position-2:3 *//* @group Basics */
 body {
   background: White;
-  color: Black;
+  color: 575757;
   font: 100% Arial, FreeSans, sans-serif;
   width: 100%;
 }
@@ -530,7 +530,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #444444;
+  color: #0081a3;
 }
 h2 a, h3 a, h4 a {
   border-bottom: none !important;
@@ -1017,6 +1017,9 @@ dl.portlet ul.navTree li a {
   display: block;
   zoom: 1;
 }
+dl.portlet ul.navTree li a span {
+  color: white;
+}
 dl.portlet ul.navTree .navTreeCurrentItem {
   background-color: #dddddd;
   border-left: 1em solid #dddddd;
@@ -1082,12 +1085,12 @@ dl.portletNavigationTree dd.portletItem {
   margin: 0 0 1em 2em;
 }
 #content a:link {
-  color: #205c90;
-  border-bottom: 0.1em solid #cccccc;
+  color: #0084a7;
+  border-bottom: 0.1em solid #0084a7;
 }
 #content a:visited {
-  color: #427597;
-  border-bottom: 0.1em solid #cccccc;
+  color: #0084a7;
+  border-bottom: 0.1em solid #0084a7;
 }
 #content a:hover {
   color: Black !important;
@@ -2795,9 +2798,7 @@ div.overlaybg div.close {
     max-width: 980px;
   }
   #main {
-    /*margin: 0 auto;*/
-    /*max-width: 980px;*/
-    background: blue;
+    background-color: SkyBlue;
   }
   #portal-columns {
 /*    margin: 0 auto;
