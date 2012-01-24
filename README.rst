@@ -514,4 +514,3 @@ http://gridcalculator.dk/#/1100/16/24/12
 
 Everything you always wanted to know about touch icons
 http://mathiasbynens.be/notes/touch-icons
-

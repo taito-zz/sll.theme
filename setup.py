@@ -1,22 +1,17 @@
 from setuptools import find_packages
 from setuptools import setup
-import os
 
-def read(*rnames):
-    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
-
-long_description = (
-    read('sll', 'theme', 'docs', 'index.rst'))
 
 setup(
     name='sll.theme',
     version='0.2',
     description="SLL Theme",
-    long_description=long_description,
+    long_description=open("README.rst").read(),
     # Get more strings from
     # http://pypi.python.org/pypi?:action=list_classifiers
     classifiers=[
         "Framework :: Plone",
+        "Framework :: Plone :: 4.2",
         "Programming Language :: Python",
     ],
     keywords='',
@@ -42,4 +37,4 @@ setup(
     [z3c.autoinclude.plugin]
     target = plone
     """,
-      )
+)

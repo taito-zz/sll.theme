@@ -1,7 +1,4 @@
 from Products.ATContentTypes.interfaces.document import IATDocument
-from Products.ATContentTypes.interfaces.folder import IATFolder
-from Products.CMFCore.utils import getToolByName
-from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 from five import grok
 from sll.theme.browser.interfaces import ISllThemeLayer
 
