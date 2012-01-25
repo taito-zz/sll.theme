@@ -11,8 +11,26 @@
         <div tal:replace="structure provider:plone.abovecontenttitle" />
         <h1 class="documentFirstHeading" tal:content="context/title" />
         <div tal:replace="structure provider:plone.belowcontenttitle" />
-        <div tal:replace="structure view/image" />
-        <div tal:replace="structure view/text" />
+        <section tal:repeat="item view/items" id="folder-feed">
+          <article>
+            <div class="crop-frame">
+              <div tal:replace="structure python: item['object'].restrictedTraverse('cropped-image')('leadImage', 'feed')" />
+            </div>
+            <h1>
+              <a tal:content="item/title"
+                 tal:attributes="href item/url;
+                                 title item/title" />
+            </h1>
+            <h2>
+              <a tal:attributes="href item/parent_url;
+                                 title item/parent;"
+                 tal:content="item/parent" />
+            </h2>
+            <p tal:content="item/description" />
+          </article>
+        </section>
+        <!-- <div tal:replace="structure view/image" />
+        <div tal:replace="structure view/text" /> -->
         <!-- <div tal:replace="structure provider:plone.abovecontentbody" /> -->
         <!-- <section id="top-view">
           <article tal:repeat="item view/items"

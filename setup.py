@@ -26,6 +26,7 @@ setup(
     install_requires=[
         'five.grok',
         'hexagonit.testing',
+        'plone.app.contentlisting',
         'plone.app.theming',
         'plone.browserlayer',
         'setuptools',

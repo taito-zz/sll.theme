@@ -28,6 +28,9 @@ nav,
 section {
   display: block;
 }
+article {
+  clear: both;
+}
 audio, canvas, video {
   display: inline-block;
   *display: inline;
@@ -1083,6 +1086,36 @@ dl.portletNavigationTree dd.portletItem {
 }
 #content dd {
   margin: 0 0 1em 2em;
+}
+#folder-feed h1{
+  font-size: 1.75em;
+  margin: 0;
+}
+#folder-feed h2{
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+  text-transform: uppercase; 
+}
+#folder-feed h1 a:link {
+  border: none;
+}
+#folder-feed h2 a:link {
+  color: #a7a7a7;
+}
+#folder-feed h2 a:visited {
+  color: #a7a7a7;
+}
+.crop-frame {
+  border: 1px solid #e3e3e3;
+  float: left;
+  margin: 0 .5em 2em 0;
+  width: 240px;
+  height: 180px;
+  padding: 5px;
+}
+.crop {
+  margin: none;
 }
 #content a:link {
   color: #0084a7;
