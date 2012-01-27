@@ -1,5 +1,3 @@
 Go to portal top::
 
     >>> browser.open(portal_url)
-
-    >>> browser.openBrowser()
