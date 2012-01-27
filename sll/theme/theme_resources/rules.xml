@@ -77,6 +77,7 @@
         <drop css:content="#portal-advanced-search" />
         <after css:content="#portal-searchbox" css:theme="#mobile-menu" />        
         <copy css:content="#portal-globalnav" css:theme="#portal-globalnav-wrapper" />
+        <copy css:content="#portal-siteactions" css:theme="#quicklinks" />
 
         <copy attributes="href title" css:content="#portal-logo" css:theme="#portal-logo" />
         <copy attributes="title alt" css:content="#portal-logo > img" css:theme="#portal-logo > img" />
@@ -112,7 +113,6 @@
         <!-- Copy the footer -->
         <copy css:content="#portal-footer" css:theme="footer" />
         <after css:content="#portal-colophon" css:theme="footer" />
-        <!-- <after css:content="#portal-siteactions" css:theme="footer" /> -->
 
     </rules>
 

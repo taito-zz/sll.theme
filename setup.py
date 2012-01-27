@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='sll.theme',
-    version='0.3',
+    version='0.4',
     description="SLL Theme",
     long_description=open("README.rst").read(),
     # Get more strings from

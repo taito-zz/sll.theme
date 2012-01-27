@@ -3,6 +3,15 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="sll.theme">
 
+  <!-- The site actions -->
+  <!-- <browser:viewlet
+    name="plone.site_actions"
+    manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+    class="plone.app.layout.viewlets.common.SiteActionsViewlet"
+    permission="zope2.View"
+    layer=".interfaces.ISllThemeLayer"
+    /> -->
+
   <!-- The breadcrumbs -->
   <browser:viewlet
     name="plone.path_bar"
