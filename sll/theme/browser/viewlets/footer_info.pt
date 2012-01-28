@@ -1,0 +1,9 @@
+<div id="footer-info">
+  <ul>
+    <li tal:repeat="item view/items">
+      <article>
+        <h1 tal:content="item/title" />
+      </article>
+    </li>
+  </ul>
+</div>

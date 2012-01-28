@@ -3,15 +3,6 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="sll.theme">
 
-  <!-- The site actions -->
-  <!-- <browser:viewlet
-    name="plone.site_actions"
-    manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-    class="plone.app.layout.viewlets.common.SiteActionsViewlet"
-    permission="zope2.View"
-    layer=".interfaces.ISllThemeLayer"
-    /> -->
-
   <!-- The breadcrumbs -->
   <browser:viewlet
     name="plone.path_bar"
@@ -28,6 +19,102 @@
     manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
     class=".viewlets.FooterViewlet"
     permission="zope.Public"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
+  <!-- Viewlet manager for top page -->
+  <browser:viewletManager
+    name="sll.top.manager"
+    provides=".interfaces.ITopViewletManager"
+    permission="zope2.View"
+    class="plone.app.viewletmanager.manager.OrderedViewletManager"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
+  <!-- News Feed Viewlet Manager -->
+  <browser:viewletManager
+    name="sll.news.feed.manager"
+    provides=".interfaces.INewsFeedViewletManager"
+    permission="zope2.View"
+    class="plone.app.viewletmanager.manager.OrderedViewletManager"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
+  <!-- Events Feed Viewlet Manager -->
+  <browser:viewletManager
+    name="sll.events.feed.manager"
+    provides=".interfaces.IEventsFeedViewletManager"
+    permission="zope2.View"
+    class="plone.app.viewletmanager.manager.OrderedViewletManager"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
+  <!-- Footer Viewlet Manager -->
+  <browser:viewletManager
+    name="sll.footer.manager"
+    provides=".interfaces.IFooterViewletManager"
+    permission="zope2.View"
+    class="plone.app.viewletmanager.manager.OrderedViewletManager"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
+  <!-- Feed -->
+  <browser:viewlet
+    name="sll.feed"
+    for="*"
+    manager=".interfaces.ITopViewletManager"
+    class=".viewlets.FeedViewlet"
+    permission="zope2.View"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
+  <!-- News and Events Viewlets -->
+  <browser:viewlet
+    name="sll.news.events"
+    for="*"
+    manager=".interfaces.ITopViewletManager"
+    class=".viewlets.NewsEventsFeedViewlet"
+    permission="zope2.View"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
+  <!-- News Feed Viewlet -->
+  <browser:viewlet
+    name="sll.news.feed"
+    for="*"
+    manager=".interfaces.INewsFeedViewletManager"
+    class=".viewlets.NewsFeedViewlet"
+    permission="zope2.View"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
+  <!-- Events Feed Viewlet -->
+  <browser:viewlet
+    name="sll.events.feed"
+    for="*"
+    manager=".interfaces.IEventsFeedViewletManager"
+    class=".viewlets.EventsFeedViewlet"
+    permission="zope2.View"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
+  <!-- Footer Info Viewlet -->
+  <browser:viewlet
+    name="sll.footer.info"
+    for="*"
+    manager=".interfaces.IFooterViewletManager"
+    class=".viewlets.FooterInfoViewlet"
+    permission="zope2.View"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
+  <!-- Footer Info Viewlet -->
+  <browser:viewlet
+    name="sll.footer.subfolders"
+    for="*"
+    manager=".interfaces.IFooterViewletManager"
+    class=".viewlets.FooterSubfoldersViewlet"
+    permission="zope2.View"
     layer=".interfaces.ISllThemeLayer"
     />
 
