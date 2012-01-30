@@ -2345,6 +2345,7 @@ dl.toc dd ol {
 /* @group Footer */
 footer {
   background: #767676;
+  padding: 2em 0;
 }
 #portal-footer {
   font-size: 75%;
@@ -2359,10 +2360,20 @@ footer {
 #portal-footer h2 {
   color: white;
   font-weight: normal;
+}
+#portal-footer h1 {
+  margin: 0;
   font-size: 1.2em;
 }
-#portal-footer h1 span {
-  border-bottom: 0.5px solid white;
+#portal-footer h2 {
+  font-size: 1em;
+}
+#portal-footer h1 a,
+#portal-footer h2 a {
+  color: white;
+}
+#portal-footer h1 a {
+  border-bottom: 1px solid #b7b7b7;
   padding-right: 0.5em;
 }
 #footer-border {
@@ -2373,6 +2384,21 @@ footer {
 #footer-info li {
   display: inline-block;
   vertical-align: top;
+}
+#footer-subfolders {
+  column-count: 5;
+  -moz-column-count: 5;
+  -webkit-column-count: 5;
+  -o-column-count: 5;
+  -ms-column-count: 5;
+}
+#footer-subfolders article {
+  column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  border-left: 1px solid #b7b7b7;
+  padding: 0 0.5em;
+  margin-bottom: 0.5em;
 }
 #portal-colophon {
   font-size: 70%;
@@ -2849,7 +2875,9 @@ div.overlaybg div.close {
     max-width: 980px;
   }
   #main {
-    background-color: SkyBlue;
+    /*background-color: SkyBlue;*/
+    background: -moz-linear-gradient(SkyBlue, transparent);
+    background: -webkit-gradient(linear, left top, left bottom, from(SkyBlue), to(transparent)); 
   }
   #portal-columns {
 /*    margin: 0 auto;

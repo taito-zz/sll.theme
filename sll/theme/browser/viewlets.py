@@ -16,6 +16,40 @@ class PathBarViewlet(PathBarViewlet):
     index = ViewPageTemplateFile('viewlets/path_bar.pt')
 
 
+class SiteActionsViewlet(ViewletBase):
+    index = ViewPageTemplateFile('viewlets/site_actions.pt')
+
+    def update(self):
+        # context_state = getMultiAdapter((self.context, self.request),
+                                        # name=u'plone_context_state')
+        # self.site_actions = context_state.actions('site_actions')
+        self.site_actions = self.items()
+
+    def items(self):
+        context = aq_inner(self.context)
+        portal_state = getMultiAdapter((context, self.request), name="plone_portal_state")
+        catalog = getToolByName(context, 'portal_catalog')
+        query = {
+            'object_provides': IATFolder.__identifier__,
+            'path': {
+                'query': portal_state.navigation_root_path(),
+                'depth': 1,
+            },
+            'sort_on': 'getObjPositionInParent', 
+            'Subject': 'actions',
+        }
+        res = catalog(query)
+        # items = [
+        #     {
+        #         'title': item.Title(),
+        #         'url': item.getURL(),
+        #         'description': item.Description(),
+        #     } for item in IContentListing(res)
+        # ]
+        # return items
+        return IContentListing(res)
+
+
 class FooterViewlet(ViewletBase):
     index = ViewPageTemplateFile('viewlets/footer.pt')
 
@@ -168,6 +202,7 @@ class FooterSubfoldersViewlet(ViewletBase):
                 'query': portal_state.navigation_root_path(),
                 'depth': 1,
             },
+            'sort_on': 'getObjPositionInParent',
         }
         res = [brain for brain in catalog(query) if not brain.exclude_from_nav]
         ploneview = getMultiAdapter(
@@ -191,6 +226,7 @@ class FooterSubfoldersViewlet(ViewletBase):
                 'query': item.getPath(),
                 'depth': 1,
             },
+            'sort_on': 'getObjPositionInParent',
         }
         res = catalog(query)
         items = [

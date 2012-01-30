@@ -12,6 +12,15 @@
     layer=".interfaces.ISllThemeLayer"
     />
 
+  <!-- SiteActions -->
+  <browser:viewlet
+    name="plone.site_actions"
+    manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+    class=".viewlets.SiteActionsViewlet"
+    permission="zope2.View"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
   <!-- Footer -->
   <browser:viewlet
     name="plone.footer"
