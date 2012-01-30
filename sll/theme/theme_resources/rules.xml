@@ -112,7 +112,7 @@
 
         <!-- Copy the footer -->
         <copy css:content="#portal-footer" css:theme="footer" />
-        <after css:content="#portal-colophon" css:theme="footer" />
+        <!-- <after css:content="#portal-colophon" css:theme="footer" /> -->
 
     </rules>
 

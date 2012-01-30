@@ -1,1 +1,14 @@
-BBB
+<div id="footer-subfolders">
+  <ul>
+      <li tal:repeat="item view/items">
+        <article>
+          <h1><span tal:content="item/title" /></h1>
+          <ul>
+            <li tal:repeat="folder item/subfolders">
+              <h2 tal:content="folder/title" />
+            </li>
+          </ul>
+        </article>
+      </li>
+  </ul>
+</div>

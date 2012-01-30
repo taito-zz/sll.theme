@@ -2343,6 +2343,9 @@ dl.toc dd ol {
 }
 /* @end */
 /* @group Footer */
+footer {
+  background: #767676;
+}
 #portal-footer {
   font-size: 75%;
   background: #767676;
@@ -2350,11 +2353,26 @@ dl.toc dd ol {
   margin: 0 auto;
   line-height: 2em;
   max-width: 980px;
+  color: white;
+}
+#portal-footer h1,
+#portal-footer h2 {
+  color: white;
+  font-weight: normal;
+  font-size: 1.2em;
+}
+#portal-footer h1 span {
+  border-bottom: 0.5px solid white;
+  padding-right: 0.5em;
 }
 #footer-border {
   height: 1em;
   background: -moz-linear-gradient(#545454, #767676) repeat scroll 0 0 transparent;
   background: -webkit-gradient(linear, left top, left bottom, from(#545454), to(#767676)); 
+}
+#footer-info li {
+  display: inline-block;
+  vertical-align: top;
 }
 #portal-colophon {
   font-size: 70%;
