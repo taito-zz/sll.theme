@@ -20,9 +20,6 @@ class SiteActionsViewlet(ViewletBase):
     index = ViewPageTemplateFile('viewlets/site_actions.pt')
 
     def update(self):
-        # context_state = getMultiAdapter((self.context, self.request),
-                                        # name=u'plone_context_state')
-        # self.site_actions = context_state.actions('site_actions')
         self.site_actions = self.items()
 
     def items(self):
@@ -39,14 +36,6 @@ class SiteActionsViewlet(ViewletBase):
             'Subject': 'actions',
         }
         res = catalog(query)
-        # items = [
-        #     {
-        #         'title': item.Title(),
-        #         'url': item.getURL(),
-        #         'description': item.Description(),
-        #     } for item in IContentListing(res)
-        # ]
-        # return items
         return IContentListing(res)
 
 
