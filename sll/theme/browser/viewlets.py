@@ -9,6 +9,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.contentlisting.interfaces import IContentListing
 from plone.app.layout.viewlets.common import PathBarViewlet
 from plone.app.layout.viewlets.common import ViewletBase
+from sll.policy.browser.interfaces import ITopPageFeed
 from zope.component import getMultiAdapter
 
 
@@ -51,11 +52,11 @@ class FeedViewlet(ViewletBase):
         catalog = getToolByName(context, 'portal_catalog')
         limit = 3
         query = {
-            'object_provides': (IATDocument.__identifier__, IATEvent.__identifier__),
+            'object_provides': ITopPageFeed.__identifier__,
             'sort_on': 'modified', 
             'sort_order': 'reverse',
             'sort_limit': limit,
-            'Subject': 'top',
+            # 'Subject': 'top',
         }
         res = catalog(query)[:limit]
         ploneview = getMultiAdapter(

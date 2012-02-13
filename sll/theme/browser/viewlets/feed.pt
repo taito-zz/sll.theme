@@ -21,7 +21,7 @@
               class="date"
               tal:content="item/date"
               />
-            </h2>
+          </h2>
           <p tal:content="item/description" />
           <p>
             <a tal:attributes="href item/url;"
