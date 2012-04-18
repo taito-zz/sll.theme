@@ -24,13 +24,8 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'five.grok',
-        'hexagonit.testing',
-        'plone.app.contentlisting',
         'plone.app.theming',
-        'plone.browserlayer',
         'setuptools',
-        'zope.i18nmessageid',
     ],
     entry_points="""
     # -*- Entry points: -*-
