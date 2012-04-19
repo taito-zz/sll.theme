@@ -709,6 +709,7 @@ dd {
 #portal-searchbox input[type="submit"] {
   background: #c12763;
   border-radius: 5px;
+  color: white;
 }
 #portal-searchbox input[type="submit"]:hover {
   background: #df2c70;
@@ -798,12 +799,11 @@ input.searchField {
 /* @group Site actions */
 #portal-siteactions {
   font-size: 85%;
-  padding-bottom: 2em;
   text-align: center;
   clear: left;
 }
 #portal-siteactions li {
-  margin-right: 0.5em;
+  margin-left: 0.5em;
 }
 #portal-siteactions li a:hover {
   color: Black;
@@ -847,18 +847,29 @@ dl.portlet dt.hiddenStructure {
 dl.portlet a {
   text-decoration: none;
 }
-dl.portlet a:link {
-  color: #205c90;
+dl.portletNavigationTree a:link {
+  color: white !important;
   border-bottom: 0.1em solid #cccccc;
 }
-dl.portlet a:visited {
-  color: #427597;
+dl.portletNavigationTree a:link.state-private{
+  color: red !important;
+  /*border-bottom: 0.1em solid #cccccc;*/
+}
+dl.portletNavigationTree a:visited {
+  color: white !important;
   border-bottom: 0.1em solid #cccccc;
 }
-dl.portlet a:hover {
+dl.portletNavigationTree a:visited.state-private{
+  color: red !important;
+  /*border-bottom: 0.1em solid #cccccc;*/
+}
+dl.portletNavigationTree a:hover {
   color: Black !important;
   /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
-
+}
+dl.portletNavigationTree a:hover.state-private {
+  color: Black !important;
+  /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
 }
 dl.portlet dd.portletItem, dl.portlet dd.portletFooter {
   padding: 1em;
@@ -1020,18 +1031,23 @@ dl.portlet ul.navTree li a {
   display: block;
   zoom: 1;
 }
-dl.portlet ul.navTree li a span {
+/*dl.portlet ul.navTree li a span {
   color: white;
-}
+}*/
 dl.portlet ul.navTree .navTreeCurrentItem {
-  background-color: #dddddd;
-  border-left: 1em solid #dddddd;
+  background-color: #CA2464;
+  border-left: 1em solid #CA2464;
   margin-left: -1em;
   margin-right: -1em;
 }
+dl.portlet ul.navTreeLevel0 li.navTreeCurrentNode {
+  padding: 0.25em 1em;
+  background: #CA2464;
+  border-radius: 5px;
+  line-height: 2em;
+}
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
   padding: 0.25em 1em;
-  /*border-bottom: 0.1em dotted #dddddd;*/
   background: #29a2bf;
   border-radius: 5px;
   line-height: 2em;
@@ -1106,6 +1122,36 @@ dl.portletNavigationTree dd.portletItem {
 #folder-feed h2 a:visited {
   color: #a7a7a7;
 }
+#content #news-events-feed li section h1{
+  font-weight: normal;
+  line-height: 1.2em;
+  margin-bottom: 0.3em;
+  padding: 0 0.3em;
+}
+#content #news-events-feed li .simple-feed article{
+  margin-bottom: 0.2em;
+  padding: 0 0.5em;
+}
+#content #news-events-feed li .simple-feed article h1{
+  border: none;
+  font-size: 1.3em;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+#content #news-events-feed li .simple-feed article h2{
+  border: none;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+}
+#content #news-events-feed li .simple-feed article h2 a:link{
+  color: #a7a7a7;
+}
+.sll-date {
+  color: #a7a7a7;
+}
+
 .crop-frame {
   border: 1px solid #e3e3e3;
   float: left;
