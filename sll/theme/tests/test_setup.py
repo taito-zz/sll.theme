@@ -19,11 +19,6 @@ class TestCase(IntegrationTestCase):
         self.installer.uninstallProducts(['sll.theme'])
         self.failIf(self.installer.isProductInstalled('sll.theme'))
 
-    def test_browserlayer(self):
-        from sll.theme.browser.interfaces import ISllThemeLayer
-        from plone.browserlayer import utils
-        self.failUnless(ISllThemeLayer in utils.registered_layers())
-
     def test_css_registry_configured(self):
         css_resources = set(
             getToolByName(self.portal, 'portal_css').getResourceIds())

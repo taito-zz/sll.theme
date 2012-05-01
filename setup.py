@@ -24,6 +24,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
+        'hexagonit.testing',
         'plone.app.theming',
         'plone.app.themingplugins',
         'setuptools',
