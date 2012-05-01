@@ -25,6 +25,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'plone.app.theming',
+        'plone.app.themingplugins',
         'setuptools',
     ],
     entry_points="""

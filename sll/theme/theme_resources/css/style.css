@@ -597,7 +597,7 @@ dd {
 /* @group Navigation/search */
 #portal-logo {
   display: inline-block;
-  margin: 1.375em 0;
+  margin: 0;
 }
 #portal-header {
   position: relative;
@@ -697,7 +697,7 @@ dd {
   float: right;
   text-align: left;
   clear: right;
-  margin: 1.2em 0;
+  /*margin-top: 0.3em;*/
   font-size: 80%;
 }
 #portal-searchbox form {
@@ -798,9 +798,11 @@ input.searchField {
 /* @end */
 /* @group Site actions */
 #portal-siteactions {
+  clear: right;
   font-size: 85%;
-  text-align: center;
-  clear: left;
+  margin: 0.3em 0;
+  float: right;
+  /*clear: left;*/
 }
 #portal-siteactions li {
   margin-left: 0.5em;
@@ -2445,6 +2447,9 @@ footer {
   display: table-cell;
   vertical-align: top;
 }
+#footer-info a:link, #footer-info a:visited {
+  color: white;
+}
 #footer-subfolders {
   column-count: 5;
   -moz-column-count: 5;
@@ -2906,6 +2911,9 @@ div.overlaybg div.close {
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible {
   visibility: hidden;
+}
+table.invisible {
+  visibility: visible;
 }
 /* Contain floats: h5bp.com/q */.clearfix:before, .clearfix:after {
   content: "";
