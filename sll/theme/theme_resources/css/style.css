@@ -1212,6 +1212,9 @@ dl.portletNavigationTree dd.portletItem {
   line-height: 1.5em;
   display: list-item;
 }
+#content li#document-action-print {
+  display: block;
+}
 #content pre {
   background-color: #222222;
   color: White;
@@ -1234,8 +1237,8 @@ dl.portletNavigationTree dd.portletItem {
   color: #666666;
 }
 #content .discreet {
-  color: #666666;
-  font-size: 85%;
+  color: #aaaaaa;
+  font-size: 60%;
   font-weight: normal;
 }
 #content .visualHighlight {
@@ -1243,14 +1246,14 @@ dl.portletNavigationTree dd.portletItem {
 }
 #content .pullquote {
   margin: 0 1em 0.5em 0.5em;
-  font-weight: bold;
+  /*font-weight: bold;*/
   line-height: 1.25em;
   float: right;
   width: 35%;
   clear: right;
-  color: #444444;
-  font-size: 1.6em;
-  letter-spacing: -0.08em !important;
+  color: #0084A7;
+  /*font-size: 1.6em;
+  letter-spacing: -0.08em !important;*/
 }
 #content .callout {
   background: #eeeeee;
@@ -2407,7 +2410,7 @@ dl.toc dd ol {
 /* @group Footer */
 footer {
   background: #767676;
-  padding: 2em 0;
+  padding: 1em 0;
 }
 #portal-footer {
   font-size: 75%;
@@ -2443,6 +2446,9 @@ footer {
   background: -moz-linear-gradient(#545454, #767676) repeat scroll 0 0 transparent;
   background: -webkit-gradient(linear, left top, left bottom, from(#545454), to(#767676)); 
 }
+#footer-info {
+  margin-bottom: 1em;
+}
 #footer-info li {
   display: table-cell;
   vertical-align: top;
@@ -2463,7 +2469,13 @@ footer {
   -webkit-column-break-inside: avoid;
   border-left: 1px solid #b7b7b7;
   padding: 0 0.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
+}
+#footer-subfolders article h1 a:link{
+  font-weight: bold;
+}
+#footer-subfolders article h2{
+  margin: 0;
 }
 #portal-colophon {
   font-size: 70%;
