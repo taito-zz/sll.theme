@@ -1435,7 +1435,7 @@ table.plain td,
 table.plain th,
 table.listing td,
 table.listing th {
-  padding: 0.5em 1em;
+  padding: 0.1em 0.3em;
   vertical-align: top;
 }
 table.plain th, table.plain td {
