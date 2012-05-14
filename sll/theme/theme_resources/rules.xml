@@ -3,8 +3,11 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+    <notheme if-path="portal_registration/passwordreset" /> 
+
     <!-- Apply theme to normal Plone pages -->
     <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+
 
     <rules css:if-content="#visual-portal-wrapper">
 
