@@ -2411,6 +2411,8 @@ dl.toc dd ol {
 footer {
   background: #767676;
   padding: 1em 0;
+  margin: auto;
+  width: 97.75%;
 }
 #portal-footer {
   font-size: 75%;
@@ -2444,7 +2446,9 @@ footer {
 #footer-border {
   height: 1em;
   background: -moz-linear-gradient(#545454, #767676) repeat scroll 0 0 transparent;
-  background: -webkit-gradient(linear, left top, left bottom, from(#545454), to(#767676)); 
+  background: -webkit-gradient(linear, left top, left bottom, from(#545454), to(#767676));
+  margin: auto;
+  width: 97.75%;
 }
 #footer-info {
   margin-bottom: 1em;
@@ -2957,7 +2961,9 @@ table.invisible {
   #main {
     /*background-color: SkyBlue;*/
     background: -moz-linear-gradient(SkyBlue, transparent);
-    background: -webkit-gradient(linear, left top, left bottom, from(SkyBlue), to(transparent)); 
+    background: -webkit-gradient(linear, left top, left bottom, from(SkyBlue), to(transparent));
+    margin: auto;
+    width: 97.75%;
   }
   #portal-columns {
 /*    margin: 0 auto;
