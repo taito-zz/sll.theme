@@ -1105,8 +1105,12 @@ dl.portletNavigationTree dd.portletItem {
 #content dd {
   margin: 0 0 1em 2em;
 }
+#folder-feed .feed-text {
+  padding-top: 5px;
+}
 #folder-feed h1{
   font-size: 1.75em;
+  line-height: 1em;
   margin: 0;
 }
 #folder-feed h2{
@@ -1123,6 +1127,13 @@ dl.portletNavigationTree dd.portletItem {
 }
 #folder-feed h2 a:visited {
   color: #a7a7a7;
+}
+#folder-feed p {
+  margin: 0;
+}
+
+#folder-feed p a:link {
+  border: none;
 }
 #content #news-events-feed li section h1{
   font-weight: normal;
@@ -1147,9 +1158,11 @@ dl.portletNavigationTree dd.portletItem {
   font-weight: normal;
   margin: 0;
 }
-#content #news-events-feed li .simple-feed article h2 a:link{
+#content #news-events-feed li .simple-feed article h2 a:link,
+#content #news-events-feed li .simple-feed article h2 a:visited {
   color: #a7a7a7;
 }
+
 .sll-date {
   color: #a7a7a7;
 }
