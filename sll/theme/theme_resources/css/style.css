@@ -1306,6 +1306,34 @@ dl.portletNavigationTree dd.portletItem {
   width: 190px;
   top: -3em;
 }
+section#collective-search-event-results h1{
+  margin: 0.5em 0 0.2em 0;
+}
+section#collective-search-event-results article{
+  margin-bottom: 1em;
+}
+section#collective-search-event-results article h1,
+section#collective-search-event-results article h2 {
+  margin: 0;
+}
+section#collective-search-event-results article h1 {
+  font-size: 1.2em;
+}
+section#collective-search-event-results article h2{
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+}
+section#collective-search-event-results article h2 .datetime{
+  color: #A7A7A7;
+  margin-left: 0.5em;
+}
+section#collective-search-event-results article p{
+  margin: 0;
+}
+.collectiveSearchEventPortlet .label {
+  font-weight: normal;
+}
 #category {
   font-size: 75%;
   margin-bottom: 1em;
