@@ -697,7 +697,7 @@ dd {
   float: right;
   text-align: left;
   clear: right;
-  /*margin-top: 0.3em;*/
+  margin-top: 0.5em;
   font-size: 80%;
 }
 #portal-searchbox form {
