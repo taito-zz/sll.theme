@@ -1162,7 +1162,9 @@ dl.portletNavigationTree dd.portletItem {
 #content #news-events-feed li .simple-feed article h2 a:visited {
   color: #a7a7a7;
 }
-
+#content #news-events-feed a.more-link {
+  margin: 0.5em;
+}
 .sll-date {
   color: #a7a7a7;
 }
