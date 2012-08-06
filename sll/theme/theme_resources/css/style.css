@@ -888,6 +888,9 @@ dl.portlet li {
 dl.portletError {
   background-color: #ffa500;
 }
+dl.portletSLLMap {
+  margin: 0;
+}
 div.portletAssignments {
   font-size: 0.8em;
   line-height: 2em;
