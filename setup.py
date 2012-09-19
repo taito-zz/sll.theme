@@ -13,7 +13,7 @@ setup(
         "Framework :: Plone",
         "Framework :: Plone :: 4.2",
         "Programming Language :: Python",
-    ],
+        "Programming Language :: Python :: 2.7"],
     keywords='',
     author='Taito Horiuchi',
     author_email='taito.horiuchi@abita.fi',
@@ -27,12 +27,10 @@ setup(
         'hexagonit.testing',
         'plone.app.theming',
         'plone.app.themingplugins',
-        'setuptools',
-    ],
+        'setuptools'],
     entry_points="""
     # -*- Entry points: -*-
 
     [z3c.autoinclude.plugin]
     target = plone
-    """,
-)
+    """)

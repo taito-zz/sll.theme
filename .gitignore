@@ -1,10 +1,11 @@
-sll/theme/docs/_build/*
-sll/theme/theme_resources/less/plone/*.css
-sll/theme/theme_resources/less/theme/*.css
 *.egg-info
 *.mo
 *.pyc
 *.pyo
 *~
 .DS_Store
+.long-description.html
 dist
+sll/theme/docs/_build/*
+sll/theme/theme_resources/less/plone/*.css
+sll/theme/theme_resources/less/theme/*.css

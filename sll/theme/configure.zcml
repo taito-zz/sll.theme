@@ -2,17 +2,16 @@
   i18n_domain="sll.theme"
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
   xmlns:plone="http://namespaces.plone.org/plone"
-  xmlns="http://namespaces.zope.org/zope"
-  >
+  xmlns="http://namespaces.zope.org/zope">
 
   <includeDependencies package="."/>
 
   <!-- Container for all static theme related files -->
   <plone:static
-      directory="theme_resources"
-      type="theme"
-      name="sll.theme"
-      />
+    directory="theme_resources"
+    type="theme"
+    name="sll.theme"
+    />
 
   <genericsetup:registerProfile
     description="Installs the sll.theme package"
