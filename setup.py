@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='sll.theme',
-    version='0.7.1',
+    version='0.8',
     description="SLL Theme",
     long_description=open("README.rst").read(),
     # Get more strings from
@@ -17,7 +17,7 @@ setup(
     keywords='',
     author='Taito Horiuchi',
     author_email='taito.horiuchi@abita.fi',
-    url='',
+    url='http://www.sll.fi/',
     license='None-free',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['sll'],
