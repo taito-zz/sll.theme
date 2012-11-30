@@ -1,20 +1,27 @@
 <configure
   i18n_domain="sll.theme"
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  xmlns:grok="http://namespaces.zope.org/grok"
   xmlns:plone="http://namespaces.plone.org/plone"
   xmlns="http://namespaces.zope.org/zope">
 
-  <includeDependencies package="."/>
+  <include package="Products.PloneFormGen"/>
+  <include package="collective.contentleadimage"/>
+  <include package="collective.cropimage"/>
+  <include package="collective.searchevent"/>
+  <include package="five.grok"/>
+  <include package="five.pt"/>
+  <include package="plone.app.theming"/>
+  <grok:grok package="." />
 
-  <!-- Container for all static theme related files -->
   <plone:static
-    directory="theme_resources"
+    directory="resources"
     type="theme"
     name="sll.theme"
     />
 
   <genericsetup:registerProfile
-    description="Installs the sll.theme package"
+    description="Installs sll.theme"
     directory="profiles/default"
     name="default"
     provides="Products.GenericSetup.interfaces.EXTENSION"

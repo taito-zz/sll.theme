@@ -7,6 +7,11 @@ sll.theme provides theme for SLL site.
 Change log
 ----------
 
+0.9 (2012-11-xx)
+================
+
+- Added testing integration to Travis CI. [taito]
+
 0.8 (2012-11-14)
 ================
 

@@ -7,8 +7,6 @@ setup(
     version='0.8',
     description="SLL Theme",
     long_description=open("README.rst").read(),
-    # Get more strings from
-    # http://pypi.python.org/pypi?:action=list_classifiers
     classifiers=[
         "Framework :: Plone",
         "Framework :: Plone :: 4.2",
@@ -17,13 +15,21 @@ setup(
     keywords='',
     author='Taito Horiuchi',
     author_email='taito.horiuchi@abita.fi',
-    url='http://www.sll.fi/',
+    url='https://github.com/taito/sll.theme',
     license='None-free',
-    packages=find_packages(exclude=['ez_setup']),
+    packages=find_packages('src', exclude=['ez_setup']),
+    package_dir={'': 'src'},
     namespace_packages=['sll'],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
+        'Products.CMFPlone',
+        'Products.PloneFormGen',
+        'collective.contentleadimage',
+        'collective.cropimage',
+        'collective.searchevent',
+        'five.grok',
+        'five.pt',
         'hexagonit.testing',
         'plone.app.theming',
         'plone.app.themingplugins',
