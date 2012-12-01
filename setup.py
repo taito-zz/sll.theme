@@ -32,7 +32,8 @@ setup(
         'five.pt',
         'hexagonit.testing',
         'plone.app.theming',
-        'plone.app.themingplugins',
+        # 'plone.app.themingplugins',
+        'sll.basetheme',
         'setuptools'],
     entry_points="""
     # -*- Entry points: -*-

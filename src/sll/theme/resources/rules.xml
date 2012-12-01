@@ -1,124 +1,22 @@
+<?xml version="1.0"?>
 <rules
-    xmlns="http://namespaces.plone.org/diazo"
-    xmlns:css="http://namespaces.plone.org/diazo/css"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
-    <notheme if-path="portal_registration/passwordreset" /> 
-
-    <!-- Apply theme to normal Plone pages -->
-    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
-
-
-    <rules css:if-content="#visual-portal-wrapper">
-
-        <!-- Drop Plone's meta tags that define the content type and IE rendering mode.
-             We set those explicitly in our theme. This allows us to copy the
-             rest of the <meta> tags in one go. -->
-        <drop css:content="meta[http-equiv]" />
-        <!-- Drop the viewport meta tag from Plone -->
-        <drop css:content="meta[name=viewport]"/>
-
-        <before content="/html/head/meta" css:theme="#css" />
-        <replace content="/html/head/title" theme="/html/head/title"/>
-
-        <!-- Copy the <base> tag -->
-        <replace content="/html/head/base" theme="/html/head/base" />
-
-        <replace content="/html/head/title" theme="/html/head/title" />
-
-        <!-- Copy style and link tags in the order they appear in the content -->
-        <after
-            content="/html/head/style | /html/head/link"
-            css:theme="#css"
-            />
-        <!-- Drop the css target from the theme -->
-        <drop css:theme="#css" />
-
-        <!-- Drop the "type" attribute from <script> tags. HTML5 doesn't mandate
-             it and we can save a few bytes there. -->
-        <drop css:content="script" attributes="type"/>
-
-        <!-- Copy script tags in the order they appear in the content but place
-             them at the bottom of the theme. -->
-        <before
-            css:content="head > script"
-            css:theme="#javascript_at_bottom"
-            />
-
-        <!-- Copy inline javascripts from within the body -->
-        <replace
-            css:content="body script"
-            css:theme="#javascript_inline"
-            method="raw"
-            />
-
-        <!-- Drop the scripts within the body because we have copied them to the
-             end of the page -->
-        <drop css:content="#visual-portal-wrapper script"/>
-
-        <!-- Drop the javascript target from the theme -->
-        <drop css:theme="#javascript_at_bottom"/>
-
-        <!-- Copy over the id/class attributes on the body tag.
-             This is important for per-section styling -->
-        <merge attributes="class" css:content="body" css:theme="body" />
-        <copy attributes="id dir" css:content="body" css:theme="body" />
-
-        <!-- Copy the header -->
-        <!-- <before css:content="#portal-personaltools-wrapper" css:theme="#mobile-menu" />
-        <before css:content="#portal-logo" css:theme="#mobile-menu" />
-        <after css:content="#portal-searchbox" css:theme="#mobile-menu" />
-        <after css:content="#portal-globalnav" css:theme="#mobile-menu" />
-
-        <drop css:theme="#mobile-page-settings"
-              if-content="not(//*[@id='edit-bar'])" /> -->
-
-        <replace css:content="#portal-top" css:theme="#portal-top" />
-        <!-- <before css:content="#portal-personaltools-wrapper" 
-                css:theme="#portal-logo"
-                css:if-content=".actionMenuHeader" />
-        <drop css:content=".searchSection" />
-        <drop css:content="#portal-advanced-search" />
-        <after css:content="#portal-searchbox" css:theme="#mobile-menu" />
-        <copy css:content="#portal-globalnav" css:theme="#portal-globalnav-wrapper" />
-        <copy css:content="#portal-siteactions" css:theme="#quicklinks" /> -->
-
-        <!-- <copy attributes="href title" css:content="#portal-logo" css:theme="#portal-logo" />
-        <copy attributes="title alt" css:content="#portal-logo > img" css:theme="#portal-logo > img" /> -->
-        <!-- <replace css:content="#portal-logo" css:theme="#portal-logo" /> -->
-
-        <drop css:theme="#mobile-page-settings"
-              if-content="not(//*[@id='edit-bar'])" />
-
-        <!-- Copy the body of the page -->
-        <!-- Based on the tableleftcolumndown variable order the columns for the
-             tablet view -->
-        <copy css:content="#portal-column-content" css:theme="#portal-columns" />
-
-        <drop css:content="#breadcrumbs-you-are-here" />
-        <!-- <copy css:content=".breadcrumbSeparator" css:theme=".breadcrumbSeparator" /> -->
-        <!-- <copy css:content="#portal-breadcrumbs" css:theme="portal-breadcrumbs" /> -->
-
-        <rules if="$tabletleftcolumndown">
-            <after css:content="#portal-column-two" css:theme-children="#portal-columns" />
-            <after css:content="#portal-column-one" css:theme-children="#portal-columns" />
-            <prepend css:theme="#visual-portal-wrapper">
-                <xsl:attribute name="class">tablet-left-down</xsl:attribute>
-            </prepend>
-        </rules>
-
-        <rules if="not($tabletleftcolumndown)">
-            <after css:content="#portal-column-one" css:theme-children="#portal-columns" />
-            <after css:content="#portal-column-two" css:theme-children="#portal-columns" />
-            <prepend css:theme="#visual-portal-wrapper">
-                <xsl:attribute name="class">tablet-right-down</xsl:attribute>
-            </prepend>
-        </rules>
-
-        <!-- Copy the footer -->
-        <copy css:content="#portal-footer" css:theme="footer" />
-        <!-- <after css:content="#portal-colophon" css:theme="footer" /> -->
-
-    </rules>
-
+  xmlns:css="http://namespaces.plone.org/diazo/css"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns="http://namespaces.plone.org/diazo">
+  <notheme if-path="portal_registration/passwordreset" />
+  <notheme if-path="@@manage-viewlets" />
+  <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+  <rules css:if-content="#visual-portal-wrapper">
+    <drop css:content="meta[http-equiv]" />
+    <replace content="/html/head/title" theme="/html/head/title"/>
+    <copy content="/html/head/meta" theme="/html/head/meta"/>
+    <replace content="/html/head/link" theme="/html/head/link"/>
+    <replace content="/html/head/script" theme="/html/head/script"/>
+    <merge attributes="class" css:content="body" css:theme="body" />
+    <after css:content-children="#portal-top" css:theme-children="#portal-top" />
+    <after css:content="#portal-columns" css:theme-children="#portal-body" />
+    <drop css:content="#portal-columns" attributes="class" />
+    <replace css:content="#portal-footer-wrapper" css:theme="#portal-footer-wrapper" />
+    <drop css:content="#kss-spinner" />
+  </rules>
 </rules>

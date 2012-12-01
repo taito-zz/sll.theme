@@ -1,0 +1,16 @@
+<configure
+  i18n_domain="sll.theme"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  xmlns="http://namespaces.zope.org/zope">
+
+  <genericsetup:upgradeStep
+    description=""
+    destination="2"
+    handler="sll.basetheme.upgrades.install_sll_basetheme"
+    profile="sll.theme:default"
+    sortkey="1"
+    source="1"
+    title="Install sll.basetheme"
+    />
+
+</configure>

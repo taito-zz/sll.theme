@@ -1,4 +1,5 @@
 from Products.CMFCore.utils import getToolByName
+from sll.basetheme.tests.test_setup import get_css_resource
 from sll.theme.tests.base import IntegrationTestCase
 
 
@@ -7,37 +8,129 @@ class TestCase(IntegrationTestCase):
 
     def setUp(self):
         self.portal = self.layer['portal']
-        self.installer = getToolByName(self.portal, 'portal_quickinstaller')
 
-    def test_is_sll_theme_installed(self):
-        self.failUnless(self.installer.isProductInstalled('sll.theme'))
+    def test_package__installed(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        self.failUnless(installer.isProductInstalled('sll.theme'))
 
-    def test_is_plone_app_theming_installed(self):
-        self.failUnless(self.installer.isProductInstalled('plone.app.theming'))
+    def test_cssregistry__sll_theme_main__applyPrefix(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/main.css')
+        self.assertTrue(resource.getApplyPrefix())
+
+    def test_cssregistry__sll_theme_main__authenticated(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/main.css')
+        self.assertFalse(resource.getAuthenticated())
+
+    def test_cssregistry__sll_theme_main__compression(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/main.css')
+        self.assertEqual(resource.getCompression(), 'safe')
+
+    def test_cssregistry__sll_theme_main__conditionalcomment(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/main.css')
+        self.assertEqual(resource.getConditionalcomment(), '')
+
+    def test_cssregistry__sll_theme_main__cookable(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/main.css')
+        self.assertTrue(resource.getCookable())
+
+    def test_cssregistry__sll_theme_main__enabled(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/main.css')
+        self.assertTrue(resource.getEnabled())
+
+    def test_cssregistry__sll_theme_main__expression(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/main.css')
+        self.assertEqual(resource.getExpression(), 'request/HTTP_X_THEME_ENABLED | nothing')
+
+    def test_cssregistry__sll_theme_main__media(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/main.css')
+        self.assertEqual(resource.getMedia(), 'screen')
+
+    def test_cssregistry__sll_theme_main__rel(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/main.css')
+        self.assertEqual(resource.getRel(), 'stylesheet')
+
+    def test_cssregistry__sll_theme_main__rendering(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/main.css')
+        self.assertEqual(resource.getRendering(), 'link')
+
+    def test_cssregistry__sll_theme_main__title(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/main.css')
+        self.assertIsNone(resource.getTitle())
+
+    def test_cssregistry__sll_theme_extra__applyPrefix(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/extra.css')
+        self.assertTrue(resource.getApplyPrefix())
+
+    def test_cssregistry__sll_theme_extra__authenticated(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/extra.css')
+        self.assertFalse(resource.getAuthenticated())
+
+    def test_cssregistry__sll_theme_extra__compression(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/extra.css')
+        self.assertEqual(resource.getCompression(), 'safe')
+
+    def test_cssregistry__sll_theme_extra__conditionalcomment(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/extra.css')
+        self.assertEqual(resource.getConditionalcomment(), '')
+
+    def test_cssregistry__sll_theme_extra__cookable(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/extra.css')
+        self.assertTrue(resource.getCookable())
+
+    def test_cssregistry__sll_theme_extra__enabled(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/extra.css')
+        self.assertTrue(resource.getEnabled())
+
+    def test_cssregistry__sll_theme_extra__expression(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/extra.css')
+        self.assertEqual(resource.getExpression(), 'request/HTTP_X_THEME_ENABLED | nothing')
+
+    def test_cssregistry__sll_theme_extra__media(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/extra.css')
+        self.assertEqual(resource.getMedia(), 'screen')
+
+    def test_cssregistry__sll_theme_extra__rel(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/extra.css')
+        self.assertEqual(resource.getRel(), 'stylesheet')
+
+    def test_cssregistry__sll_theme_extra__rendering(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/extra.css')
+        self.assertEqual(resource.getRendering(), 'link')
+
+    def test_cssregistry__sll_theme_extra__title(self):
+        resource = get_css_resource(self.portal, '++theme++sll.theme/css/extra.css')
+        self.assertIsNone(resource.getTitle())
+
+    def test_metadata__dependency__Products_PloneFormGen(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        self.failUnless(installer.isProductInstalled('PloneFormGen'))
+
+    def test_metadata__dependency__collective_contentleadimage(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        self.failUnless(installer.isProductInstalled('collective.contentleadimage'))
+
+    def test_metadata__dependency__collective_cropimage(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        self.failUnless(installer.isProductInstalled('collective.cropimage'))
+
+    def test_metadata__dependency__collective_searchevent(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        self.failUnless(installer.isProductInstalled('collective.searchevent'))
+
+    def test_metadata__dependency__plone_app_theming(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        self.failUnless(installer.isProductInstalled('plone.app.theming'))
+
+    def test_metadata__dependency__sll_basetheme(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        self.failUnless(installer.isProductInstalled('sll.basetheme'))
+
+    def test_metadata__version(self):
+        setup = getToolByName(self.portal, 'portal_setup')
+        self.assertEqual(
+            setup.getVersionForProfile('profile-sll.theme:default'), u'2')
 
     def test_uninstall(self):
-        self.installer.uninstallProducts(['sll.theme'])
-        self.failIf(self.installer.isProductInstalled('sll.theme'))
-
-    def test_css_registry_configured(self):
-        css_resources = set(
-            getToolByName(self.portal, 'portal_css').getResourceIds())
-
-        self.failUnless(
-            '++theme++sll.theme/css/style.css' in css_resources)
-
-    def test_js_registry_configured(self):
-        js_resources = set(
-            getToolByName(self.portal, 'portal_javascripts').getResourceIds())
-
-        self.failUnless(
-            '++theme++sll.theme/javascript/libs/modernizr-2.0.6.min.js'
-            in js_resources)
-
-    def test_doctype_configured(self):
-        from plone.app.theming.interfaces import IThemeSettings
-        from plone.registry.interfaces import IRegistry
-        from zope.component import getUtility
-
-        settings = getUtility(IRegistry).forInterface(IThemeSettings)
-        self.assertEqual(settings.doctype, '<!doctype html>')
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        installer.uninstallProducts(['sll.theme'])
+        self.failIf(installer.isProductInstalled('sll.theme'))

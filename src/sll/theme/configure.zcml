@@ -12,6 +12,8 @@
   <include package="five.grok"/>
   <include package="five.pt"/>
   <include package="plone.app.theming"/>
+  <include package="sll.basetheme"/>
+  <include file="upgrades.zcml"/>
   <grok:grok package="." />
 
   <plone:static
