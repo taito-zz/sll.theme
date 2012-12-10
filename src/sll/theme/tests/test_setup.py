@@ -13,6 +13,11 @@ class TestCase(IntegrationTestCase):
         installer = getToolByName(self.portal, 'portal_quickinstaller')
         self.failUnless(installer.isProductInstalled('sll.theme'))
 
+    def test_browserlayer(self):
+        from sll.theme.browser.interfaces import ISllThemeLayer
+        from plone.browserlayer import utils
+        self.failUnless(ISllThemeLayer in utils.registered_layers())
+
     def test_cssregistry__sll_theme_main__applyPrefix(self):
         resource = get_css_resource(self.portal, '++theme++sll.theme/css/main.css')
         self.assertTrue(resource.getApplyPrefix())
@@ -101,18 +106,6 @@ class TestCase(IntegrationTestCase):
         resource = get_css_resource(self.portal, '++theme++sll.theme/css/extra.css')
         self.assertIsNone(resource.getTitle())
 
-    def test_metadata__dependency__Products_PloneFormGen(self):
-        installer = getToolByName(self.portal, 'portal_quickinstaller')
-        self.failUnless(installer.isProductInstalled('PloneFormGen'))
-
-    def test_metadata__dependency__collective_contentleadimage(self):
-        installer = getToolByName(self.portal, 'portal_quickinstaller')
-        self.failUnless(installer.isProductInstalled('collective.contentleadimage'))
-
-    def test_metadata__dependency__collective_cropimage(self):
-        installer = getToolByName(self.portal, 'portal_quickinstaller')
-        self.failUnless(installer.isProductInstalled('collective.cropimage'))
-
     def test_metadata__dependency__collective_searchevent(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')
         self.failUnless(installer.isProductInstalled('collective.searchevent'))
@@ -125,12 +118,27 @@ class TestCase(IntegrationTestCase):
         installer = getToolByName(self.portal, 'portal_quickinstaller')
         self.failUnless(installer.isProductInstalled('sll.basetheme'))
 
+    def test_metadata__dependency__sll_carousel(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        self.failUnless(installer.isProductInstalled('sll.carousel'))
+
+    def test_metadata__dependency__sll_templates(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        self.failUnless(installer.isProductInstalled('sll.templates'))
+
     def test_metadata__version(self):
         setup = getToolByName(self.portal, 'portal_setup')
         self.assertEqual(
-            setup.getVersionForProfile('profile-sll.theme:default'), u'2')
+            setup.getVersionForProfile('profile-sll.theme:default'), u'4')
 
     def test_uninstall(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')
         installer.uninstallProducts(['sll.theme'])
         self.failIf(installer.isProductInstalled('sll.theme'))
+
+    def test_uninstall__browserlayer(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        installer.uninstallProducts(['sll.theme'])
+        from sll.theme.browser.interfaces import ISllThemeLayer
+        from plone.browserlayer import utils
+        self.failIf(ISllThemeLayer in utils.registered_layers())

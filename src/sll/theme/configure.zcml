@@ -5,14 +5,13 @@
   xmlns:plone="http://namespaces.plone.org/plone"
   xmlns="http://namespaces.zope.org/zope">
 
-  <include package="Products.PloneFormGen"/>
-  <include package="collective.contentleadimage"/>
-  <include package="collective.cropimage"/>
   <include package="collective.searchevent"/>
   <include package="five.grok"/>
   <include package="five.pt"/>
   <include package="plone.app.theming"/>
   <include package="sll.basetheme"/>
+  <include package="sll.carousel"/>
+  <include package="sll.templates"/>
   <include file="upgrades.zcml"/>
   <grok:grok package="." />
 

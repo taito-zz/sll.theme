@@ -23,18 +23,15 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'Products.CMFPlone',
-        'Products.PloneFormGen',
-        'collective.contentleadimage',
-        'collective.cropimage',
         'collective.searchevent',
         'five.grok',
         'five.pt',
         'hexagonit.testing',
         'plone.app.theming',
-        # 'plone.app.themingplugins',
+        'setuptools',
         'sll.basetheme',
-        'setuptools'],
+        'sll.carousel',
+        'sll.templates'],
     entry_points="""
     # -*- Entry points: -*-
 

@@ -7,6 +7,11 @@ sll.theme provides theme for SLL site.
 Change log
 ----------
 
+1.0 (2012-12-10)
+================
+
+- Moved customized search event viewlet and monthly support template from sll.templates package. [taito]
+
 0.9 (2012-12-02)
 ================
 

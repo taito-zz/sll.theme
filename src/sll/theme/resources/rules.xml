@@ -14,7 +14,8 @@
     <replace content="/html/head/script" theme="/html/head/script"/>
     <merge attributes="class" css:content="body" css:theme="body" />
     <after css:content-children="#portal-top" css:theme-children="#portal-top" />
-    <after css:content="#portal-columns" css:theme-children="#portal-body" />
+    <replace css:content=".carousel" css:theme="#portal-carousel" />
+    <replace css:content="#portal-columns" css:theme="#portal-columns" />
     <drop css:content="#portal-columns" attributes="class" />
     <replace css:content="#portal-footer-wrapper" css:theme="#portal-footer-wrapper" />
     <drop css:content="#kss-spinner" />

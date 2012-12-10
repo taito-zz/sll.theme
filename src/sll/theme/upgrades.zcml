@@ -13,4 +13,24 @@
     title="Install sll.basetheme"
     />
 
+  <genericsetup:upgradeStep
+    description="Updating old css into new."
+    destination="3"
+    handler="sll.theme.upgrades.reimport_cssregistry"
+    profile="sll.theme:default"
+    sortkey="1"
+    source="2"
+    title="Reimport cssregistry"
+    />
+
+  <genericsetup:upgradeStep
+    description="Add browserlayer: ISllThemeLayer"
+    destination="4"
+    handler="sll.theme.upgrades.reimport_browserlayer"
+    profile="sll.theme:default"
+    sortkey="1"
+    source="3"
+    title="Reimport browserlayer"
+    />
+
 </configure>

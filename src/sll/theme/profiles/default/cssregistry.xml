@@ -46,9 +46,8 @@
     />
 
   <stylesheet
-    expression="python:portal.restrictedTraverse('@@plone_portal_state').is_rtl()"
+    enabled="False"
     id="RTL.css"
-    rendering="link"
     />
 
   <stylesheet
@@ -91,6 +90,11 @@
     expression=""
     id="forms.css"
     rendering="link"
+    />
+
+  <stylesheet
+    enabled="False"
+    id="++theme++sll.theme/css/style.css"
     />
 
   <stylesheet

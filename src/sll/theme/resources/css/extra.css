@@ -1,37 +1,3 @@
-#footer-info {
-    margin-bottom: 1em;
-}
-#footer-info li {
-    display: table-cell;
-    vertical-align: top;
-}
-#footer-subfolders {
-    column-count: 5;
-    -moz-column-count: 5;
-    -webkit-column-count: 5;
-}
-#footer-subfolders article {
-    border-left: 1px solid #b7b7b7;
-    padding: 0 0.5em;
-    margin-bottom: 1.5em;
-}
-#footer-subfolders article h1 a:link{
-    font-weight: bold;
-}
-#footer-info h1,
-#footer-subfolders article h1,
-#footer-subfolders article h2 {
-    letter-spacing: 0.1em;
-}
-#footer-info h1,
-#footer-subfolders article h1 {
-    font-size: 1.2em;
-}
-#footer-info h1,
-#footer-subfolders article h2 {
-    font-weight: normal;
-}
-#footer-subfolders article h2{
-    margin: 0;
-    font-size: 1.1em;
+.portlet-static-luonto-liitto {
+    height: 100px;
 }
