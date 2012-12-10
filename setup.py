@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='sll.theme',
-    version='0.9',
+    version='1.0',
     description="SLL Theme",
     long_description=open("README.rst").read(),
     classifiers=[
