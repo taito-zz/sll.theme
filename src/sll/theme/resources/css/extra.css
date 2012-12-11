@@ -1,3 +1,10 @@
 .portlet-static-luonto-liitto {
     height: 100px;
 }
+.carousel {
+    margin: auto auto 0.7em;
+}
+
+.carousel-pager {
+    top: -50px;
+}
