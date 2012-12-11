@@ -7,6 +7,11 @@ sll.theme provides theme for SLL site.
 Change log
 ----------
 
+1.0.1 (2012-12-11)
+==================
+
+- Updated background color and added margin for carousel. [taito]
+
 1.0 (2012-12-10)
 ================
 
