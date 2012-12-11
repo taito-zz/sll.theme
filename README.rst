@@ -7,6 +7,11 @@ sll.theme provides theme for SLL site.
 Change log
 ----------
 
+1.0.2 (2012-12-11)
+==================
+
+- Updated link hover color to black. [taito]
+
 1.0.1 (2012-12-11)
 ==================
 
