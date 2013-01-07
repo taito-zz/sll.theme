@@ -3,12 +3,6 @@
     color: black;
 }
 
-/*Content*/
-#portal-body {
-    background: -moz-linear-gradient(SkyBlue, transparent);
-    background: -webkit-gradient(linear, left top, left bottom, from(SkyBlue), to(transparent));
-}
-
 #content a:hover, dl.portlet a:hover {
     color: black !important;
 }

@@ -7,6 +7,11 @@ sll.theme provides theme for SLL site.
 Change log
 ----------
 
+1.0.3 (2013-01-07)
+==================
+
+- Removed background styles. [taito]
+
 1.0.2 (2012-12-11)
 ==================
 
