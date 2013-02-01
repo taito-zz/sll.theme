@@ -7,8 +7,21 @@
     color: black !important;
 }
 
+#portal-siteactions {
+    font-size: 80%;
+}
+#portal-globalnav {
+    font-size: 85%;
+}
+
 /*NaveTree*/
 dl.portlet ul.navTree li.navTreeItemInPath li.navTreeCurrentNode a.navTreeCurrentItem:hover,
-dl.portlet ul.navTree li a.state-published:hover {
+dl.portlet ul.navTree li a.state-published:hover,
+dl.portlet ul.navTreeLevel0 > li.navTreeItem > a.state-published:hover {
     color: black !important;
+}
+
+/* Footer */
+#portal-footer-wrapper {
+    font-size: 80%;
 }

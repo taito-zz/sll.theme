@@ -27,7 +27,7 @@ setup(
         'five.grok',
         'five.pt',
         'hexagonit.testing',
-        'plone.app.theming',
+        # 'plone.app.theming',
         'setuptools',
         'sll.basetheme',
         'sll.carousel',

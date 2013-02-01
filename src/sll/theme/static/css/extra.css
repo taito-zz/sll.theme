@@ -8,3 +8,13 @@
 .carousel-pager {
     top: -50px;
 }
+
+
+#main-feed {
+    margin: 0 0 3em;
+}
+
+/* Footer */
+#footer-info h1, #footer-subfolders article h1 {
+    font-size: 1.1em;
+}

@@ -33,4 +33,14 @@
     title="Reimport browserlayer"
     />
 
+  <genericsetup:upgradeStep
+    description=""
+    destination="5"
+    handler="sll.theme.upgrades.reimport_cssregistry"
+    profile="sll.theme:default"
+    sortkey="1"
+    source="4"
+    title="Reimport cssregistry"
+    />
+
 </configure>

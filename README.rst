@@ -7,6 +7,11 @@ sll.theme provides theme for SLL site.
 Change log
 ----------
 
+1.1 (2013-02-01)
+================
+
+- Removed dependency from plone.app.theming. [taito]
+
 1.0.3 (2013-01-07)
 ==================
 
