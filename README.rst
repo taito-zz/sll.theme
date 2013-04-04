@@ -7,6 +7,11 @@ sll.theme provides theme for SLL site.
 Change log
 ----------
 
+1.1.1 (2013-04-04)
+==================
+
+- Hid some elements from commenting. [taito]
+
 1.1 (2013-02-01)
 ================
 

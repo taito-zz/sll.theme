@@ -25,3 +25,9 @@ dl.portlet ul.navTreeLevel0 > li.navTreeItem > a.state-published:hover {
 #portal-footer-wrapper {
     font-size: 80%;
 }
+
+/* Comment */
+#commenting p,
+#commenting #formfield-form-widgets-comment-text label {
+    display: none;
+}
