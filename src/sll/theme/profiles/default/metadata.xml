@@ -3,7 +3,6 @@
   <version>5</version>
   <dependencies>
     <dependency>profile-collective.searchevent:default</dependency>
-    <!-- <dependency>profile-plone.app.theming:default</dependency> -->
     <dependency>profile-sll.basetheme:default</dependency>
     <dependency>profile-sll.carousel:default</dependency>
     <dependency>profile-sll.templates:default</dependency>

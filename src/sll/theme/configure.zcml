@@ -8,18 +8,11 @@
   <include package="collective.searchevent"/>
   <include package="five.grok"/>
   <include package="five.pt"/>
-  <!-- <include package="plone.app.theming"/> -->
   <include package="sll.basetheme"/>
   <include package="sll.carousel"/>
   <include package="sll.templates"/>
   <include file="upgrades.zcml"/>
   <grok:grok package="." />
-
-  <!-- <plone:static
-    directory="resources"
-    type="theme"
-    name="sll.theme"
-    /> -->
 
   <genericsetup:registerProfile
     description="Installs sll.theme"
