@@ -18,3 +18,16 @@
 #footer-info h1, #footer-subfolders article h1 {
     font-size: 1.1em;
 }
+
+/*Media Queries*/
+@media screen and (max-width: 1300px) {
+    #portal-header,
+    #portal-columns {
+        margin: 0 5%;
+        width: 90%;
+    }
+    .carousel {
+    margin: auto 5% 0.7em;
+    width: 90%;
+}
+}

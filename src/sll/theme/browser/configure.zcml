@@ -1,0 +1,34 @@
+<configure
+  i18n_domain="sll.theme"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns="http://namespaces.zope.org/zope">
+
+  <browser:resourceDirectory
+    name="sll.theme"
+    directory="static"
+    layer=".interfaces.ISllThemeLayer"
+    />
+
+  <!-- View -->
+
+  <browser:page
+    class=".template.MonthlySupporterView"
+    for="Products.ATContentTypes.interfaces.IATDocument"
+    layer=".interfaces.ISllThemeLayer"
+    name="monthly-supporter"
+    permission="zope2.View"
+    />
+
+  <!-- Viewlet -->
+
+  <browser:viewlet
+    class=".viewlet.SLLSearchEventResultsViewlet"
+    for="*"
+    layer=".interfaces.ISllThemeLayer"
+    manager="collective.base.interfaces.IBaseFormViewletManager"
+    name="collective.searchevent.viewlets.search-event-results"
+    permission="zope2.View"
+    view="collective.searchevent.browser.interfaces.ISearchEventResultsView"
+    />
+
+</configure>

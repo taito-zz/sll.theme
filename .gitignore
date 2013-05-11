@@ -8,5 +8,3 @@
 build
 dist
 setup.cfg
-sll/theme/theme_resources/less/plone/*.css
-sll/theme/theme_resources/less/theme/*.css

@@ -110,6 +110,10 @@ class TestCase(IntegrationTestCase):
         installer = getToolByName(self.portal, 'portal_quickinstaller')
         self.failUnless(installer.isProductInstalled('collective.searchevent'))
 
+    def test_metadata__dependency__plone_formwidget_captcha(self):
+        installer = getToolByName(self.portal, 'portal_quickinstaller')
+        self.failUnless(installer.isProductInstalled('plone.formwidget.captcha'))
+
     def test_metadata__dependency__sll_basetheme(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')
         self.failUnless(installer.isProductInstalled('sll.basetheme'))

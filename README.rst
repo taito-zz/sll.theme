@@ -7,6 +7,12 @@ sll.theme provides theme for SLL site.
 Change log
 ----------
 
+1.2 (2013-05-11)
+================
+
+- Removed dependency from five.grok. [taito]
+- Tested with Plone-4.3. [taito]
+
 1.1.1 (2013-04-04)
 ==================
 

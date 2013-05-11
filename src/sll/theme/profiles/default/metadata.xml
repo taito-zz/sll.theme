@@ -3,6 +3,7 @@
   <version>5</version>
   <dependencies>
     <dependency>profile-collective.searchevent:default</dependency>
+    <dependency>profile-plone.formwidget.captcha:default</dependency>
     <dependency>profile-sll.basetheme:default</dependency>
     <dependency>profile-sll.carousel:default</dependency>
     <dependency>profile-sll.templates:default</dependency>

@@ -1,6 +1,6 @@
 <tal:block
   i18n:domain="collective.searchevent"
-  tal:define="batch viewlet/batch;">
+  tal:define="batch view/batch;">
   <p tal:condition="not: batch"
      i18n:translate="">
     There are no search results found.
@@ -21,13 +21,13 @@
           <a
             class="parent"
             tal:attributes="
-              alt python: viewlet.parent(item).Description();
-              href python: viewlet.parent(item).absolute_url();
-              title python: viewlet.parent(item).Title();
+              alt python: view.parent(item).Description();
+              href python: view.parent(item).absolute_url();
+              title python: view.parent(item).Title();
             "
-            tal:content="python: viewlet.parent(item).Title()"
+            tal:content="python: view.parent(item).Title()"
             />
-          <span class="datetime" tal:content="python: viewlet.datetime(item)" />
+          <span class="datetime" tal:content="python: view.datetime(item)" />
         </h2>
         <p
           tal:condition="item/Description"
@@ -35,6 +35,8 @@
           />
       </article>
     </tal:results>
-    <div metal:use-macro="context/batch_macros/macros/navigation" />
+    <tal:batchnavigation
+      define="batchnavigation nocall:context/@@batchnavigation"
+      replace="structure python:batchnavigation(batch)" />
   </tal:block>
 </tal:block>

@@ -7,11 +7,25 @@
     color: black !important;
 }
 
+.documentDescription {
+    margin: 0 0 1em;
+}
+
 #portal-siteactions {
     font-size: 80%;
 }
 #portal-globalnav {
     font-size: 85%;
+}
+
+/* Search */
+#LSResult {
+    margin: 0 0 0 -7em;
+}
+
+/* Content */
+img.image-left, img.image-right {
+    border: none;
 }
 
 /*NaveTree*/
@@ -30,4 +44,9 @@ dl.portlet ul.navTreeLevel0 > li.navTreeItem > a.state-published:hover {
 #commenting p,
 #commenting #formfield-form-widgets-comment-text label {
     display: none;
+}
+
+/* Portlet */
+dl.portlet {
+    margin: 0 0 2em;
 }
