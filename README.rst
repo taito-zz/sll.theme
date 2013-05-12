@@ -4,8 +4,13 @@ sll.theme
 
 sll.theme provides theme for SLL site.
 
-Change log
-----------
+Changelog
+---------
+
+1.2.1 (2013-05-12)
+==================
+
+- Updated templates and styles. [taito]
 
 1.2 (2013-05-11)
 ================
