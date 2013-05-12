@@ -1,5 +1,6 @@
-<tal:block
+<section
   i18n:domain="collective.searchevent"
+  id="search-event-results"
   tal:define="batch view/batch;">
   <p tal:condition="not: batch"
      i18n:translate="">
@@ -39,4 +40,4 @@
       define="batchnavigation nocall:context/@@batchnavigation"
       replace="structure python:batchnavigation(batch)" />
   </tal:block>
-</tal:block>
+</section>
