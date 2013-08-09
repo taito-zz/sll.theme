@@ -10,7 +10,6 @@
   <include package="sll.carousel"/>
   <include package="sll.templates"/>
   <include package=".browser" />
-  <include file="upgrades.zcml"/>
 
   <genericsetup:registerProfile
     description="Installs sll.theme"

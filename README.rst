@@ -7,6 +7,11 @@ sll.theme provides theme for SLL site.
 Changelog
 ---------
 
+1.2.2 (2013-08-09)
+==================
+
+- Remove upgrade steps. [taito]
+
 1.2.1 (2013-05-12)
 ==================
 
