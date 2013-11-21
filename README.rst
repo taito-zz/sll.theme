@@ -7,6 +7,11 @@ sll.theme provides theme for SLL site.
 Changelog
 ---------
 
+1.2.3 (2013-11-21)
+==================
+
+- Update style for column width: 970px. [taito]
+
 1.2.2 (2013-08-09)
 ==================
 
